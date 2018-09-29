@@ -19,6 +19,8 @@ Please ensure your pull request follow to the below guidelines:
  
 Appreciate your contributions and Thank You in Advance
 
+
+> Hope you will enjoy working on this repo, it will be great fun for begineers of Data Structure
 ----
 <p align="center">
 <b>Archit</b>
