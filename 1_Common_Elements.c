@@ -1,4 +1,4 @@
-//To print all comman elements in the Given three sorted Array
+//To print all comman 
 
 #include <stdio.h>
 void Common_Elements(int A[], int B[], int C[], int a, int b, int c) {
