@@ -5,7 +5,7 @@
 </h1>
 
 ------
-> This Problem were given in Assignment during my basic Array_Data_Structure Course!!
+> These Problems were given as a Assignment during the class of basic Array_Data_Structure Course!!
 
 - Programming Problems Based On Arrays consisting of basic to intermediate level problems.
 
