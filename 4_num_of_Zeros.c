@@ -6,17 +6,18 @@
 #include <stdlib.h>
 
 //Function to Count Number of zeros
-int Count_Zeros(int A[], int n, int count) {
-  if(n-1 >= 0) {
-    if(A[n-1] == 0) {
-      count++;
-      return Count_Zeros(A, n-1, count);
-    }
-    else {
-      return Count_Zeros(A, n-1, count);
-    }
-  }
-  return count;
+int Count_Zeros(int *A, int n, int countZ) 
+{
+	if(n==-1)
+		return countZ;
+	else
+	{
+		if(A[n]==0)
+			countZ=1+Count_Zeros(A,n-1,countZ);
+		else
+			countZ=0+Count_Zeros(A,n-1,countZ);
+	}
+  
 }
 
 int main()
@@ -35,7 +36,7 @@ int main()
 		scanf("%d", &A[i]);
 	}
   int count;
-  count = Count_Zeros(A,n,0);
+  count = Count_Zeros(A,n-1,0);
   printf("\nNumber of Zeros in the array: %d\n\n", count);
   return 0;
 }
