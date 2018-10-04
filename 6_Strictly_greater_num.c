@@ -42,13 +42,12 @@ int Strictly_greater_num(int A[], int first, int last, int k) {
 // By checking after dividing matrix if middle element  is equal to targeted element
 // or if middle is less but middle + 1 element is greater then it will return next element
 
-			else if(A[middle]>k){
-				return Strictly_greater_num(A, first, middle-1, k);
-			}
+			else if(A[middle]>k)
+				return Strictly_greater_num(A, first, middle, k);
 			else
 				return Strictly_greater_num(A, middle+1, last, k);
-			}
 		}
+	}
 }
 
 int main()
