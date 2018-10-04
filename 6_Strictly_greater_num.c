@@ -48,6 +48,11 @@ int Strictly_greater_num(int A[], int first, int last, int k) {
 				return Strictly_greater_num(A, middle+1, last, k);
 		}
 	}
+
+    // It should never reach this point, but the compiler still expects a return
+    // value, otherwise it throws error warnings.
+    printf("Error: something bad happened!\n");
+    return -1;
 }
 
 int main()
