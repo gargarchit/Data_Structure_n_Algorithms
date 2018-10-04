@@ -71,6 +71,17 @@ int main()
 		scanf("%d", &A[i]);
 	}
 
+    // Simple validation of user input
+    for(i=0;i<(n-1);i++)
+    {
+        if(A[i] >= A[i+1])
+        {
+            printf("\n\nInvalid input. Please, enter a sorted array without"
+                    " repeated numbers.\n\n");
+            return -1;
+        }
+    }
+
 	int target_value;
 	printf("\nEnter the Target Value:");
 	scanf("%d", &target_value);
