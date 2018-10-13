@@ -27,5 +27,10 @@ Appreciate your contributions and Thank You in Advance
 
 ----
 <p align="center">
-<b>Archit</b>
+<b>
+Arrays_Problems is licensed under the MIT License
+</b>
+</p>
+<p align="center">
+<b>Copyright (c) 2018 Archit</b>
 </p>
