@@ -28,7 +28,7 @@ Appreciate your contributions and Thank You in Advance
 ----
 <p align="center">
 <b>
-Arrays_Problems is licensed under the MIT License
+Arrays_Problems! is licensed under the MIT License
 </b>
 </p>
 <p align="center">
