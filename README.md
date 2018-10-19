@@ -1,14 +1,14 @@
 <h1 align="center">
   <br>
-      Arrays_Problems!
+      Data_Structure_n_Algorithms!
   <br>
 </h1>
 
 ------
 
-* Programming Problems Based On Arrays consisting of basic to intermediate level problems
+* Programming Problems Based On Data_Structure and Algorithms consisting of basic to intermediate level problems
 
-> These Problems were given as a Assignment during the class of basic `Array_Data_Structure` Course!!
+> These Problems were given as a Assignment during the class of basic `Data_Structure_n_Algorithms` Course!!
 
 ------
 
@@ -28,7 +28,7 @@ Appreciate your contributions and Thank You in Advance
 ----
 <p align="center">
 <b>
-Arrays_Problems! is licensed under the MIT License
+Data_Structure_n_Algorithms! is licensed under the MIT License
 </b>
 </p>
 <p align="center">
