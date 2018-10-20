@@ -18,7 +18,7 @@ Please ensure your `pull request` follow to the below guidelines:
 
 - Please be sure that program is compiling without an Error or warning before doing Pull Request.
 - Please Include Comments in the code about your changes you done there.
-- Feel free to suggest any improvements to be done here. 
+- Feel free to suggest any improvements to be done here in Issues. 
  
 Appreciate your contributions and Thank You in Advance
 
