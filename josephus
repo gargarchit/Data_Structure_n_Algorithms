@@ -1,0 +1,27 @@
+#include <stdio.h> 
+#include <time.h>
+int josephus(int n, int m) 
+{ 
+if (n == 1) 
+	return 1; 
+else
+	return (josephus(n - 1, m) + m-1) % n + 1; 
+} 
+
+// Driver Program to test above function 
+int main() 
+{
+	clock_t t;
+    t = clock();
+	int n,m;
+       printf("Enter the value of n\n");	
+       scanf("%d",&n);
+       printf("Enter the value of m\n");
+       scanf("%d",&m);
+	printf("The chosen place is %d", josephus(n, m)); 
+	 t = clock() - t; 
+    double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds 
+  
+    printf("fun() took %f seconds to execute \n", time_taken); 
+	return 0; 
+} 
