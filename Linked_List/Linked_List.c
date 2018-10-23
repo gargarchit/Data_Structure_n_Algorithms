@@ -12,8 +12,8 @@ NODE *getnode() {
 	newnode  = (NODE*)malloc(sizeof(NODE));
 	if(newnode==NULL)
 	{
-		printf("there is no more space in the system");
-		return;
+		printf("\nThere is no more space in the system\n");
+		return NULL;
 	}
 	int ele;
 	printf("Enter the Element in Linked List\n");
