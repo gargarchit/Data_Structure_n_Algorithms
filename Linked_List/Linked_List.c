@@ -10,6 +10,11 @@ typedef struct node NODE;
 NODE *getnode() {
 	NODE *newnode;
 	newnode  = (NODE*)malloc(sizeof(NODE));
+	if(newnode==NULL)
+	{
+		printf("there is no more space in the system");
+		return;
+	}
 	int ele;
 	printf("Enter the Element in Linked List\n");
 	scanf("%d", &ele);
