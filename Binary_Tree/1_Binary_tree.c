@@ -18,6 +18,11 @@ typedef struct Node NODE;
 
 NODE *getnode(int x) {
   NODE *newnode = (NODE*)malloc(sizeof(NODE));
+  if(newnode==NULL) 					//condition, if  there is no space in memory.
+  {
+	  printf("there is no more space in memory!");
+	  return;
+  }
   newnode->data = x;
   newnode->left = newnode->right = NULL;
   return newnode;
