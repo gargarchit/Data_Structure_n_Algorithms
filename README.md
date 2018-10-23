@@ -1,4 +1,10 @@
 <h1 align="center">
+	<img width="400" src="media/Data_Structure_n_Algorithms.png" alt="Algorithms">
+	<br>
+	<br>
+</h1>
+
+<h1 align="center">
   <br>
       Data_Structure_n_Algorithms!
   <br>
@@ -8,17 +14,21 @@
 
 * Programming Problems Based On Data_Structure and Algorithms consisting of basic to intermediate level problems
 
-> These Problems were given as a Assignment during the class of basic `Data_Structure_n_Algorithms` Course!!
+* PRs are welcome. To begin developing, follow the structure:
+
+   > Data_Structure_or_Algorithm_name/file_name.extension
+   e.g
+   > Linked_List/Cycle_Detection.c
 
 ------
 
 # Contribution Guidelines!
 
 Please ensure your `pull request` follow to the below guidelines:
-
-- Please be sure that program is compiling without an Error or warning before doing Pull Request.
-- Please Include Comments in the code about your changes you done there.
-- Feel free to suggest any improvements to be done here in Issues. 
+- Contributions are always welcome. Language doesn't matter. Just make sure you're implementing an algorithm..
+- Please be sure that program is compiling without an Error or warning before doing Pull Request..
+- Please Include Comments in the code about your changes you done there..
+- Feel free to suggest any improvements to be done here in Issues..
  
 Appreciate your contributions and Thank You in Advance
 
