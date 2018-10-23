@@ -20,8 +20,8 @@ NODE *getnode(int x) {
   NODE *newnode = (NODE*)malloc(sizeof(NODE));
   if(newnode==NULL) 					//condition, if  there is no space in memory.
   {
-	  printf("there is no more space in memory!");
-	  return;
+	  printf("\nThere is no more space in memory!\n");
+	  return NULL;
   }
   newnode->data = x;
   newnode->left = newnode->right = NULL;
