@@ -1,0 +1,93 @@
+import java.util.*;
+class Solution{
+    static class pair{
+        int x;
+        int y;
+        pair(int x,int y){
+            this.x=x;
+            this.y=y;
+        }
+    }
+    static int visited[][]=new int[8][13];
+    static int minmax(int A_row,int A_col,int B_row,int B_col,int state,int no_more_cells){
+        List<pair>list1=new ArrayList<>();           /*to store row coordinates of A and B cells*/
+        List<pair>list2=new ArrayList<>();           /*to store column coordinates of A and B cells*/
+        list1.add(new pair(A_row,B_row));
+        list2.add(new pair(A_col,B_col));
+        List<pair>neighbours=new ArrayList<>();
+        if(list2.get(0).x%2==0){                    /*in the triangle,the rows of even number have a cell which is right on top of it as adjacent*/
+            if(visited[list1.get(0).x-1][list2.get(0).x-1]==0)
+                neighbours.add(new pair(list1.get(0).x-1,list2.get(0).x-1));
+        }else{
+                                                    /*in the triangle,the rows of odd number have a cell which is diagonally right to it and hence it as adjacent*/        
+        if(visited[list1.get(0).x+1][list2.get(0).x+1]==0){
+            neighbours.add(new pair(list1.get(0).x+1,list2.get(0).x+1));
+        }
+        }                                                              
+        if(visited[list1.get(0).x][list2.get(0).x+1]==0)    //Marking the right and left adjacent cells into neighbours list
+        neighbours.add(new pair(list1.get(0).x,list2.get(0).x+1));
+        if(visited[list1.get(0).x][list2.get(0).x-1]==0)
+        neighbours.add(new pair(list1.get(0).x,list2.get(0).x-1));
+        if(neighbours.size()==0){
+            
+            if(no_more_cells>=1){                    /*this means both the coordinates are reached to a state such that it can no longer move*/
+                return 0;
+            }
+            int value=minmax(list1.get(0).y,list2.get(0).y,list1.get(0).x,list2.get(0).x,state^1,no_more_cells+1);
+            return value;
+        }
+        else{
+            /*if there are neighbours of the cell,then if its the Maximer's turn that is A's turn,visit its neighbors and recursively call minmax by altering states*/
+            if(state==0){
+                int value=-1000;
+                for(pair i:neighbours){
+                    visited[i.x][i.y]=1;
+                    value=Math.max(1+minmax(list1.get(0).y,list2.get(0).y,i.x,i.y,state^1,0),value);
+                    visited[i.x][i.y]=0;
+                }
+                return  value;
+            }
+            else{
+                //Minimizer's Turn i.e.B with state 1
+                int value=1000;
+                for(pair i:neighbours){
+                    visited[i.x][i.y]=1;
+                    value=Math.min(minmax(list1.get(0).y,list2.get(0).y,i.x,i.y,state^1,0)-1,value);
+                    visited[i.x][i.y]=0;
+                }
+                return  value;
+            }
+        }
+    }
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        int t=s.nextInt();
+        int numberoftestcases=1;
+        while(numberoftestcases<=t){
+            int side,A_row,A_col,B_row,B_col,underconstruction;
+            side=s.nextInt();
+            A_row=s.nextInt();
+            A_col=s.nextInt();
+            B_row=s.nextInt();
+            B_col=s.nextInt();
+            underconstruction=s.nextInt();
+             for(int i=0;i<8;i++)
+            for(int j=0;j<13;j++){
+                visited[i][j]=0;                 //marking all cells as unvisited
+            }
+             for(int i=0;i<8;i++)
+            for(int j=0;j<13;j++){
+                if(i==0||j>2*i-1||j==0||i>side)
+                visited[i][j]=1;                 //marking cells out of triangle as blocked
+            }
+            for(int i=0;i<underconstruction;i++){
+                visited[s.nextInt()][s.nextInt()]=1;
+            }
+            visited[A_row][A_col]=1;
+            visited[B_row][B_col]=1;
+            System.out.print("Case #"+numberoftestcases+": ");
+            System.out.println(minmax(A_row,A_col,B_row,B_col,0,0)); //Minmax algorithm is used and its a part of gametheory! 
+            numberoftestcases++;
+        }
+    }
+}
